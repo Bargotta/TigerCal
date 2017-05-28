@@ -1,0 +1,423 @@
+2ABA .START (2016-07-08 21:26:24) phpCAS-1.3.4+ ****************** [CAS.php:469]
+2ABA .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [CASTest.php:11]
+2ABA .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:361]
+2ABA .|    |    Starting a new session rmrc9ce8uuh53332ft7dv5pno5 [Client.php:906]
+2ABA .|    |    Session is not authenticated [Client.php:912]
+2ABA .|    <= ''
+2ABA .<= ''
+2ABA .=> phpCAS::setNoCasServerValidation() [CASTest.php:14]
+2ABA .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1618]
+2ABA .<= ''
+2ABA .=> phpCAS::forceAuthentication() [CASTest.php:17]
+2ABA .|    => CAS_Client::forceAuthentication() [CAS.php:1080]
+2ABA .|    |    => CAS_Client::isAuthenticated() [Client.php:1254]
+2ABA .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1367]
+2ABA .|    |    |    |    no user found [Client.php:1609]
+2ABA .|    |    |    <= false
+2ABA .|    |    |    no ticket found [Client.php:1468]
+2ABA .|    |    <= false
+2ABA .|    |    => CAS_Client::redirectToCas(false) [Client.php:1263]
+2ABA .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1630]
+2ABA .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+2ABA .|    |    |    |    |    Final URI: http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php [Client.php:3513]
+2ABA .|    |    |    |    <= 'http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php'
+2ABA .|    |    |    <= 'https://fed.princeton.edu/cas/login?service=http%3A%2F%2Flocalhost%2Ftestfiles%2FCAS%2FphpCAS-master%2Fsource%2FCASTest.php'
+2ABA .|    |    |    Redirect to : https://fed.princeton.edu/cas/login?service=http%3A%2F%2Flocalhost%2Ftestfiles%2FCAS%2FphpCAS-master%2Fsource%2FCASTest.php [Client.php:1637]
+2ABA .|    |    |    exit()
+2ABA .|    |    |    -
+2ABA .|    |    -
+2ABA .|    -
+44B4 .START (2016-07-08 21:26:24) phpCAS-1.3.4+ ****************** [CAS.php:469]
+44B4 .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [CASTest.php:11]
+44B4 .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:361]
+44B4 .|    |    Starting a new session rmrc9ce8uuh53332ft7dv5pno5 [Client.php:906]
+44B4 .|    |    Session is not authenticated [Client.php:912]
+44B4 .|    |    Ticket 'ST-86003-dkk00f5LsteQUS1bK9Ut-auth-b' found [Client.php:994]
+44B4 .|    <= ''
+44B4 .<= ''
+44B4 .=> phpCAS::setNoCasServerValidation() [CASTest.php:14]
+44B4 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1618]
+44B4 .<= ''
+44B4 .=> phpCAS::forceAuthentication() [CASTest.php:17]
+44B4 .|    => CAS_Client::forceAuthentication() [CAS.php:1080]
+44B4 .|    |    => CAS_Client::isAuthenticated() [Client.php:1254]
+44B4 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1367]
+44B4 .|    |    |    |    no user found [Client.php:1609]
+44B4 .|    |    |    <= false
+44B4 .|    |    |    CAS 2.0 ticket `ST-86003-dkk00f5LsteQUS1bK9Ut-auth-b' is present [Client.php:1421]
+44B4 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1424]
+44B4 .|    |    |    |     [Client.php:3143]
+44B4 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3150]
+44B4 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+44B4 .|    |    |    |    |    |    Final URI: http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php [Client.php:3513]
+44B4 .|    |    |    |    |    <= 'http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php'
+44B4 .|    |    |    |    <= 'https://fed.princeton.edu/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Ftestfiles%2FCAS%2FphpCAS-master%2Fsource%2FCASTest.php'
+44B4 .|    |    |    |    => CAS_Client::_readURL('https://fed.princeton.edu/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Ftestfiles%2FCAS%2FphpCAS-master%2Fsource%2FCASTest.php&ticket=ST-86003-dkk00f5LsteQUS1bK9Ut-auth-b', NULL, NULL, NULL) [Client.php:3165]
+44B4 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+44B4 .|    |    |    |    |    |    Response Body: 
+44B4 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+44B4 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+44B4 .|    |    |    |    |    |    		<cas:user>bargotta</cas:user>
+44B4 .|    |    |    |    |    |    
+44B4 .|    |    |    |    |    |    
+44B4 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+44B4 .|    |    |    |    |    |    </cas:serviceResponse>
+44B4 .|    |    |    |    |    |    
+44B4 .|    |    |    |    |    |     [CurlRequest.php:84]
+44B4 .|    |    |    |    |    <= true
+44B4 .|    |    |    |    <= true
+44B4 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3223]
+44B4 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3341]
+44B4 .|    |    |    |    <= ''
+44B4 .|    |    |    |    Storing Proxy List [Client.php:3232]
+44B4 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3235]
+44B4 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+44B4 .|    |    |    |    <= true
+44B4 .|    |    |    |    => CAS_Client::_renameSession('ST-86003-dkk00f5LsteQUS1bK9Ut-auth-b') [Client.php:3267]
+44B4 .|    |    |    |    |    Killing session: rmrc9ce8uuh53332ft7dv5pno5 [Client.php:3630]
+44B4 .|    |    |    |    |    Starting session: ST-86003-dkk00f5LsteQUS1bK9Ut-auth-b [Client.php:3634]
+44B4 .|    |    |    |    |    Restoring old session vars [Client.php:3637]
+44B4 .|    |    |    |    <= ''
+44B4 .|    |    |    <= true
+44B4 .|    |    |    CAS 2.0 ticket `ST-86003-dkk00f5LsteQUS1bK9Ut-auth-b' was validated [Client.php:1427]
+44B4 .|    |    |    => CAS_Client::getURL() [Client.php:1492]
+44B4 .|    |    |    <= 'http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php'
+44B4 .|    |    |    Prepare redirect to : http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php [Client.php:1492]
+44B4 .|    |    |    => CAS_Client::getURL() [Client.php:1494]
+44B4 .|    |    |    <= 'http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php'
+44B4 .|    |    |    exit()
+44B4 .|    |    |    -
+44B4 .|    |    -
+44B4 .|    -
+143A .START (2016-07-08 21:26:25) phpCAS-1.3.4+ ****************** [CAS.php:469]
+143A .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [CASTest.php:11]
+143A .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:361]
+143A .|    |    Starting a new session ST-86003-dkk00f5LsteQUS1bK9Ut-auth-b [Client.php:906]
+143A .|    |    Session is authenticated as: bargotta [Client.php:910]
+143A .|    <= ''
+143A .<= ''
+143A .=> phpCAS::setNoCasServerValidation() [CASTest.php:14]
+143A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1618]
+143A .<= ''
+143A .=> phpCAS::forceAuthentication() [CASTest.php:17]
+143A .|    => CAS_Client::forceAuthentication() [CAS.php:1080]
+143A .|    |    => CAS_Client::isAuthenticated() [Client.php:1254]
+143A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1367]
+143A .|    |    |    |    user = `bargotta' [Client.php:1596]
+143A .|    |    |    <= true
+143A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1391]
+143A .|    |    <= true
+143A .|    |    no need to authenticate [Client.php:1256]
+143A .|    <= true
+143A .<= ''
+7895 .START (2016-07-08 21:26:37) phpCAS-1.3.4+ ****************** [CAS.php:469]
+7895 .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [CASTest.php:11]
+7895 .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:361]
+7895 .|    |    Starting a new session ST-86003-dkk00f5LsteQUS1bK9Ut-auth-b [Client.php:906]
+7895 .|    |    Session is authenticated as: bargotta [Client.php:910]
+7895 .|    <= ''
+7895 .<= ''
+7895 .=> phpCAS::setNoCasServerValidation() [CASTest.php:14]
+7895 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1618]
+7895 .<= ''
+7895 .=> phpCAS::forceAuthentication() [CASTest.php:17]
+7895 .|    => CAS_Client::forceAuthentication() [CAS.php:1080]
+7895 .|    |    => CAS_Client::isAuthenticated() [Client.php:1254]
+7895 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1367]
+7895 .|    |    |    |    user = `bargotta' [Client.php:1596]
+7895 .|    |    |    <= true
+7895 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1391]
+7895 .|    |    <= true
+7895 .|    |    no need to authenticate [Client.php:1256]
+7895 .|    <= true
+7895 .<= ''
+7895 .=> phpCAS::logout() [CASTest.php:23]
+7895 .|    => CAS_Client::logout(array ()) [CAS.php:1424]
+7895 .|    |    Prepare redirect to : https://fed.princeton.edu/cas/logout [Client.php:1670]
+7895 .|    |    Destroying session : ST-86003-dkk00f5LsteQUS1bK9Ut-auth-b [Client.php:1672]
+7895 .|    |    Session terminated [Client.php:1676]
+7895 .|    |    exit()
+7895 .|    |    -
+7895 .|    -
+5E2C .START (2016-07-08 21:26:54) phpCAS-1.3.4+ ****************** [CAS.php:469]
+5E2C .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [CASTest.php:11]
+5E2C .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:361]
+5E2C .|    |    Starting a new session ST-86003-dkk00f5LsteQUS1bK9Ut-auth-b [Client.php:906]
+5E2C .|    |    Session is not authenticated [Client.php:912]
+5E2C .|    <= ''
+5E2C .<= ''
+5E2C .=> phpCAS::setNoCasServerValidation() [CASTest.php:14]
+5E2C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1618]
+5E2C .<= ''
+5E2C .=> phpCAS::forceAuthentication() [CASTest.php:17]
+5E2C .|    => CAS_Client::forceAuthentication() [CAS.php:1080]
+5E2C .|    |    => CAS_Client::isAuthenticated() [Client.php:1254]
+5E2C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1367]
+5E2C .|    |    |    |    no user found [Client.php:1609]
+5E2C .|    |    |    <= false
+5E2C .|    |    |    no ticket found [Client.php:1468]
+5E2C .|    |    <= false
+5E2C .|    |    => CAS_Client::redirectToCas(false) [Client.php:1263]
+5E2C .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1630]
+5E2C .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+5E2C .|    |    |    |    |    Final URI: http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php [Client.php:3513]
+5E2C .|    |    |    |    <= 'http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php'
+5E2C .|    |    |    <= 'https://fed.princeton.edu/cas/login?service=http%3A%2F%2Flocalhost%2Ftestfiles%2FCAS%2FphpCAS-master%2Fsource%2FCASTest.php'
+5E2C .|    |    |    Redirect to : https://fed.princeton.edu/cas/login?service=http%3A%2F%2Flocalhost%2Ftestfiles%2FCAS%2FphpCAS-master%2Fsource%2FCASTest.php [Client.php:1637]
+5E2C .|    |    |    exit()
+5E2C .|    |    |    -
+5E2C .|    |    -
+5E2C .|    -
+30FB .START (2016-07-08 21:27:00) phpCAS-1.3.4+ ****************** [CAS.php:469]
+30FB .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [CASTest.php:11]
+30FB .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:361]
+30FB .|    |    Starting a new session ST-86003-dkk00f5LsteQUS1bK9Ut-auth-b [Client.php:906]
+30FB .|    |    Session is not authenticated [Client.php:912]
+30FB .|    |    Ticket 'ST-86010-GmoogDfltaSAPwb3pu3M-auth-b' found [Client.php:994]
+30FB .|    <= ''
+30FB .<= ''
+30FB .=> phpCAS::setNoCasServerValidation() [CASTest.php:14]
+30FB .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1618]
+30FB .<= ''
+30FB .=> phpCAS::forceAuthentication() [CASTest.php:17]
+30FB .|    => CAS_Client::forceAuthentication() [CAS.php:1080]
+30FB .|    |    => CAS_Client::isAuthenticated() [Client.php:1254]
+30FB .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1367]
+30FB .|    |    |    |    no user found [Client.php:1609]
+30FB .|    |    |    <= false
+30FB .|    |    |    CAS 2.0 ticket `ST-86010-GmoogDfltaSAPwb3pu3M-auth-b' is present [Client.php:1421]
+30FB .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1424]
+30FB .|    |    |    |     [Client.php:3143]
+30FB .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3150]
+30FB .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+30FB .|    |    |    |    |    |    Final URI: http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php [Client.php:3513]
+30FB .|    |    |    |    |    <= 'http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php'
+30FB .|    |    |    |    <= 'https://fed.princeton.edu/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Ftestfiles%2FCAS%2FphpCAS-master%2Fsource%2FCASTest.php'
+30FB .|    |    |    |    => CAS_Client::_readURL('https://fed.princeton.edu/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Ftestfiles%2FCAS%2FphpCAS-master%2Fsource%2FCASTest.php&ticket=ST-86010-GmoogDfltaSAPwb3pu3M-auth-b', NULL, NULL, NULL) [Client.php:3165]
+30FB .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+30FB .|    |    |    |    |    |    Response Body: 
+30FB .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+30FB .|    |    |    |    |    |    	<cas:authenticationSuccess>
+30FB .|    |    |    |    |    |    		<cas:user>bargotta</cas:user>
+30FB .|    |    |    |    |    |    
+30FB .|    |    |    |    |    |    
+30FB .|    |    |    |    |    |    	</cas:authenticationSuccess>
+30FB .|    |    |    |    |    |    </cas:serviceResponse>
+30FB .|    |    |    |    |    |    
+30FB .|    |    |    |    |    |     [CurlRequest.php:84]
+30FB .|    |    |    |    |    <= true
+30FB .|    |    |    |    <= true
+30FB .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3223]
+30FB .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3341]
+30FB .|    |    |    |    <= ''
+30FB .|    |    |    |    Storing Proxy List [Client.php:3232]
+30FB .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3235]
+30FB .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+30FB .|    |    |    |    <= true
+30FB .|    |    |    |    => CAS_Client::_renameSession('ST-86010-GmoogDfltaSAPwb3pu3M-auth-b') [Client.php:3267]
+30FB .|    |    |    |    |    Killing session: ST-86003-dkk00f5LsteQUS1bK9Ut-auth-b [Client.php:3630]
+30FB .|    |    |    |    |    Starting session: ST-86010-GmoogDfltaSAPwb3pu3M-auth-b [Client.php:3634]
+30FB .|    |    |    |    |    Restoring old session vars [Client.php:3637]
+30FB .|    |    |    |    <= ''
+30FB .|    |    |    <= true
+30FB .|    |    |    CAS 2.0 ticket `ST-86010-GmoogDfltaSAPwb3pu3M-auth-b' was validated [Client.php:1427]
+30FB .|    |    |    => CAS_Client::getURL() [Client.php:1492]
+30FB .|    |    |    <= 'http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php'
+30FB .|    |    |    Prepare redirect to : http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php [Client.php:1492]
+30FB .|    |    |    => CAS_Client::getURL() [Client.php:1494]
+30FB .|    |    |    <= 'http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php'
+30FB .|    |    |    exit()
+30FB .|    |    |    -
+30FB .|    |    -
+30FB .|    -
+6578 .START (2016-07-08 21:27:00) phpCAS-1.3.4+ ****************** [CAS.php:469]
+6578 .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [CASTest.php:11]
+6578 .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:361]
+6578 .|    |    Starting a new session ST-86010-GmoogDfltaSAPwb3pu3M-auth-b [Client.php:906]
+6578 .|    |    Session is authenticated as: bargotta [Client.php:910]
+6578 .|    <= ''
+6578 .<= ''
+6578 .=> phpCAS::setNoCasServerValidation() [CASTest.php:14]
+6578 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1618]
+6578 .<= ''
+6578 .=> phpCAS::forceAuthentication() [CASTest.php:17]
+6578 .|    => CAS_Client::forceAuthentication() [CAS.php:1080]
+6578 .|    |    => CAS_Client::isAuthenticated() [Client.php:1254]
+6578 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1367]
+6578 .|    |    |    |    user = `bargotta' [Client.php:1596]
+6578 .|    |    |    <= true
+6578 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1391]
+6578 .|    |    <= true
+6578 .|    |    no need to authenticate [Client.php:1256]
+6578 .|    <= true
+6578 .<= ''
+65FF .START (2016-07-08 21:27:43) phpCAS-1.3.4+ ****************** [CAS.php:469]
+65FF .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [CASTest.php:11]
+65FF .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:361]
+65FF .|    |    Starting a new session ST-86010-GmoogDfltaSAPwb3pu3M-auth-b [Client.php:906]
+65FF .|    |    Session is authenticated as: bargotta [Client.php:910]
+65FF .|    <= ''
+65FF .<= ''
+65FF .=> phpCAS::setNoCasServerValidation() [CASTest.php:14]
+65FF .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1618]
+65FF .<= ''
+65FF .=> phpCAS::forceAuthentication() [CASTest.php:17]
+65FF .|    => CAS_Client::forceAuthentication() [CAS.php:1080]
+65FF .|    |    => CAS_Client::isAuthenticated() [Client.php:1254]
+65FF .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1367]
+65FF .|    |    |    |    user = `bargotta' [Client.php:1596]
+65FF .|    |    |    <= true
+65FF .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1391]
+65FF .|    |    <= true
+65FF .|    |    no need to authenticate [Client.php:1256]
+65FF .|    <= true
+65FF .<= ''
+65FF .=> phpCAS::logout() [CASTest.php:23]
+65FF .|    => CAS_Client::logout(array ()) [CAS.php:1424]
+65FF .|    |    Prepare redirect to : https://fed.princeton.edu/cas/logout [Client.php:1670]
+65FF .|    |    Destroying session : ST-86010-GmoogDfltaSAPwb3pu3M-auth-b [Client.php:1672]
+65FF .|    |    Session terminated [Client.php:1676]
+65FF .|    |    exit()
+65FF .|    |    -
+65FF .|    -
+6AC9 .START (2016-07-08 21:27:55) phpCAS-1.3.4+ ****************** [CAS.php:469]
+6AC9 .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [CASTest.php:11]
+6AC9 .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:361]
+6AC9 .|    |    Starting a new session ST-86010-GmoogDfltaSAPwb3pu3M-auth-b [Client.php:906]
+6AC9 .|    |    Session is not authenticated [Client.php:912]
+6AC9 .|    <= ''
+6AC9 .<= ''
+6AC9 .=> phpCAS::setNoCasServerValidation() [CASTest.php:14]
+6AC9 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1618]
+6AC9 .<= ''
+6AC9 .=> phpCAS::forceAuthentication() [CASTest.php:17]
+6AC9 .|    => CAS_Client::forceAuthentication() [CAS.php:1080]
+6AC9 .|    |    => CAS_Client::isAuthenticated() [Client.php:1254]
+6AC9 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1367]
+6AC9 .|    |    |    |    no user found [Client.php:1609]
+6AC9 .|    |    |    <= false
+6AC9 .|    |    |    no ticket found [Client.php:1468]
+6AC9 .|    |    <= false
+6AC9 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1263]
+6AC9 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1630]
+6AC9 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+6AC9 .|    |    |    |    |    Final URI: http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php [Client.php:3513]
+6AC9 .|    |    |    |    <= 'http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php'
+6AC9 .|    |    |    <= 'https://fed.princeton.edu/cas/login?service=http%3A%2F%2Flocalhost%2Ftestfiles%2FCAS%2FphpCAS-master%2Fsource%2FCASTest.php'
+6AC9 .|    |    |    Redirect to : https://fed.princeton.edu/cas/login?service=http%3A%2F%2Flocalhost%2Ftestfiles%2FCAS%2FphpCAS-master%2Fsource%2FCASTest.php [Client.php:1637]
+6AC9 .|    |    |    exit()
+6AC9 .|    |    |    -
+6AC9 .|    |    -
+6AC9 .|    -
+D4DF .START (2016-07-08 21:27:59) phpCAS-1.3.4+ ****************** [CAS.php:469]
+D4DF .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [CASTest.php:11]
+D4DF .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:361]
+D4DF .|    |    Starting a new session ST-86010-GmoogDfltaSAPwb3pu3M-auth-b [Client.php:906]
+D4DF .|    |    Session is not authenticated [Client.php:912]
+D4DF .|    |    Ticket 'ST-86015-yNDkWsZtw7nQYQHIabM1-auth-b' found [Client.php:994]
+D4DF .|    <= ''
+D4DF .<= ''
+D4DF .=> phpCAS::setNoCasServerValidation() [CASTest.php:14]
+D4DF .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1618]
+D4DF .<= ''
+D4DF .=> phpCAS::forceAuthentication() [CASTest.php:17]
+D4DF .|    => CAS_Client::forceAuthentication() [CAS.php:1080]
+D4DF .|    |    => CAS_Client::isAuthenticated() [Client.php:1254]
+D4DF .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1367]
+D4DF .|    |    |    |    no user found [Client.php:1609]
+D4DF .|    |    |    <= false
+D4DF .|    |    |    CAS 2.0 ticket `ST-86015-yNDkWsZtw7nQYQHIabM1-auth-b' is present [Client.php:1421]
+D4DF .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1424]
+D4DF .|    |    |    |     [Client.php:3143]
+D4DF .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3150]
+D4DF .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+D4DF .|    |    |    |    |    |    Final URI: http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php [Client.php:3513]
+D4DF .|    |    |    |    |    <= 'http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php'
+D4DF .|    |    |    |    <= 'https://fed.princeton.edu/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Ftestfiles%2FCAS%2FphpCAS-master%2Fsource%2FCASTest.php'
+D4DF .|    |    |    |    => CAS_Client::_readURL('https://fed.princeton.edu/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Ftestfiles%2FCAS%2FphpCAS-master%2Fsource%2FCASTest.php&ticket=ST-86015-yNDkWsZtw7nQYQHIabM1-auth-b', NULL, NULL, NULL) [Client.php:3165]
+D4DF .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+D4DF .|    |    |    |    |    |    Response Body: 
+D4DF .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+D4DF .|    |    |    |    |    |    	<cas:authenticationSuccess>
+D4DF .|    |    |    |    |    |    		<cas:user>bargotta</cas:user>
+D4DF .|    |    |    |    |    |    
+D4DF .|    |    |    |    |    |    
+D4DF .|    |    |    |    |    |    	</cas:authenticationSuccess>
+D4DF .|    |    |    |    |    |    </cas:serviceResponse>
+D4DF .|    |    |    |    |    |    
+D4DF .|    |    |    |    |    |     [CurlRequest.php:84]
+D4DF .|    |    |    |    |    <= true
+D4DF .|    |    |    |    <= true
+D4DF .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3223]
+D4DF .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3341]
+D4DF .|    |    |    |    <= ''
+D4DF .|    |    |    |    Storing Proxy List [Client.php:3232]
+D4DF .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3235]
+D4DF .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+D4DF .|    |    |    |    <= true
+D4DF .|    |    |    |    => CAS_Client::_renameSession('ST-86015-yNDkWsZtw7nQYQHIabM1-auth-b') [Client.php:3267]
+D4DF .|    |    |    |    |    Killing session: ST-86010-GmoogDfltaSAPwb3pu3M-auth-b [Client.php:3630]
+D4DF .|    |    |    |    |    Starting session: ST-86015-yNDkWsZtw7nQYQHIabM1-auth-b [Client.php:3634]
+D4DF .|    |    |    |    |    Restoring old session vars [Client.php:3637]
+D4DF .|    |    |    |    <= ''
+D4DF .|    |    |    <= true
+D4DF .|    |    |    CAS 2.0 ticket `ST-86015-yNDkWsZtw7nQYQHIabM1-auth-b' was validated [Client.php:1427]
+D4DF .|    |    |    => CAS_Client::getURL() [Client.php:1492]
+D4DF .|    |    |    <= 'http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php'
+D4DF .|    |    |    Prepare redirect to : http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php [Client.php:1492]
+D4DF .|    |    |    => CAS_Client::getURL() [Client.php:1494]
+D4DF .|    |    |    <= 'http://localhost/testfiles/CAS/phpCAS-master/source/CASTest.php'
+D4DF .|    |    |    exit()
+D4DF .|    |    |    -
+D4DF .|    |    -
+D4DF .|    -
+F685 .START (2016-07-08 21:27:59) phpCAS-1.3.4+ ****************** [CAS.php:469]
+F685 .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [CASTest.php:11]
+F685 .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:361]
+F685 .|    |    Starting a new session ST-86015-yNDkWsZtw7nQYQHIabM1-auth-b [Client.php:906]
+F685 .|    |    Session is authenticated as: bargotta [Client.php:910]
+F685 .|    <= ''
+F685 .<= ''
+F685 .=> phpCAS::setNoCasServerValidation() [CASTest.php:14]
+F685 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1618]
+F685 .<= ''
+F685 .=> phpCAS::forceAuthentication() [CASTest.php:17]
+F685 .|    => CAS_Client::forceAuthentication() [CAS.php:1080]
+F685 .|    |    => CAS_Client::isAuthenticated() [Client.php:1254]
+F685 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1367]
+F685 .|    |    |    |    user = `bargotta' [Client.php:1596]
+F685 .|    |    |    <= true
+F685 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1391]
+F685 .|    |    <= true
+F685 .|    |    no need to authenticate [Client.php:1256]
+F685 .|    <= true
+F685 .<= ''
+1875 .START (2016-07-08 21:28:07) phpCAS-1.3.4+ ****************** [CAS.php:469]
+1875 .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [CASTest.php:11]
+1875 .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:361]
+1875 .|    |    Starting a new session ST-86015-yNDkWsZtw7nQYQHIabM1-auth-b [Client.php:906]
+1875 .|    |    Session is authenticated as: bargotta [Client.php:910]
+1875 .|    <= ''
+1875 .<= ''
+1875 .=> phpCAS::setNoCasServerValidation() [CASTest.php:14]
+1875 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1618]
+1875 .<= ''
+1875 .=> phpCAS::forceAuthentication() [CASTest.php:17]
+1875 .|    => CAS_Client::forceAuthentication() [CAS.php:1080]
+1875 .|    |    => CAS_Client::isAuthenticated() [Client.php:1254]
+1875 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1367]
+1875 .|    |    |    |    user = `bargotta' [Client.php:1596]
+1875 .|    |    |    <= true
+1875 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1391]
+1875 .|    |    <= true
+1875 .|    |    no need to authenticate [Client.php:1256]
+1875 .|    <= true
+1875 .<= ''
+1875 .=> phpCAS::logout() [CASTest.php:23]
+1875 .|    => CAS_Client::logout(array ()) [CAS.php:1424]
+1875 .|    |    Prepare redirect to : https://fed.princeton.edu/cas/logout [Client.php:1670]
+1875 .|    |    Destroying session : ST-86015-yNDkWsZtw7nQYQHIabM1-auth-b [Client.php:1672]
+1875 .|    |    Session terminated [Client.php:1676]
+1875 .|    |    exit()
+1875 .|    |    -
+1875 .|    -
